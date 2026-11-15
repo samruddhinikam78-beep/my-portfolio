@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Samruddhi Nikam | Portfolio</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #C8E6EE;
+    color: #24434D;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(36,67,77,0.08);
+}
+
+.logo {
+    color: #26788A;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: #24434D;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #16869D;
+}
+
+/* HOME */
+
+section {
+    padding: 85px 10%;
+    scroll-margin-top: 75px;
+}
+
+.home {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #C8E6EE, #EAF8FB, #B5DDE7);
+}
+
+.home-content {
+    max-width: 750px;
+}
+
+.home h3 {
+    color: #287F91;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.home h1 {
+    font-size: clamp(38px, 6vw, 62px);
+    margin: 12px 0;
+    color: #183F4A;
+    line-height: 1.2;
+}
+
+.home h2 {
+    color: #287F91;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.home p {
+    max-width: 620px;
+    margin: 18px 0 30px;
+    font-size: 17px;
+    color: #45636C;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #287F91, #45A9BA);
+    color: white;
+    padding: 13px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(40,127,145,0.25);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(40,127,145,0.35);
+}
+
+/* SECTION TITLE */
+
+.section-title {
+    text-align: center;
+    color: #26788A;
+    font-size: 36px;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #45A9BA;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+/* ABOUT */
+
+#about {
+    background: #EAF7FA;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(36,67,77,0.08);
+    font-size: 17px;
+}
+
+/* CARDS */
+
+#skills {
+    background: #C8E6EE;
+}
+
+#education {
+    background: #EAF7FA;
+}
+
+#projects {
+    background: #C8E6EE;
+}
+
+#certificates {
+    background: #EAF7FA;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(255,255,255,0.85);
+    padding: 30px 25px;
+    border: 1px solid rgba(40,127,145,0.15);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(36,67,77,0.07);
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 14px 30px rgba(36,67,77,0.13);
+    border-color: #45A9BA;
+}
+
+.card h3 {
+    color: #287F91;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #56717A;
+    overflow-wrap: anywhere;
+}
+
+.card h2 {
+    color: #26788A;
+    font-size: 30px;
+}
+
+/* EDUCATION */
+
+.education {
+    border-bottom: 4px solid #45A9BA;
+}
+
+/* CERTIFICATES */
+
+.certificate-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: white;
+    background: #287F91;
+    text-decoration: none;
+    padding: 9px 22px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.certificate-link:hover {
+    background: #45A9BA;
+    transform: scale(1.05);
+}
+
+/* CONTACT */
+
+#contact {
+    background: linear-gradient(135deg, #C8E6EE, #EAF7FA);
+}
+
+.contact {
+    text-align: center;
+    background: white;
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(36,67,77,0.08);
+}
+
+.contact p {
+    margin: 12px 0;
+    font-size: 17px;
+}
+
+.contact a {
+    color: #287F91;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #244F5B;
+    color: white;
+    font-size: 14px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-content {
+    animation: fadeIn 1s ease;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 600px) {
+
+    header {
+        justify-content: center;
+        padding: 15px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .home {
+        min-height: 75vh;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .about-content {
+        padding: 25px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">Samruddhi.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<!-- HOME -->
+
+<section class="home" id="home">
+
+    <div class="home-content">
+
+        <h3>Hello, Welcome to My Portfolio!</h3>
+
+        <h1>I'm Samruddhi Nikam</h1>
+
+        <h2>Computer Engineering Student</h2>
+
+        <p>
+            I am a Computer Engineering Diploma student
+            passionate about learning new technologies,
+            developing technical skills and creating
+            attractive websites.
+        </p>
+
+        <a href="#about" class="btn">
+            Explore My Portfolio
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-content">
+
+        <p>
+             Hello! I'm Samruddhi Nikam, a passionate Computer Engineering Diploma student with a strong interest in technology, programming, and web development.
+ <br></br>
+ I enjoy exploring new technologies and learning how websites and software applications are designed and developed. I am currently building my technical knowledge in HTML, CSS, C Programming, C++, and Database Management Systems (DBMS).
+ 
+I believe in continuous learning and improving my skills through practical projects, problem-solving, and experimentation. 
+ <br></br>
+ I enjoy creating clean, user-friendly, and visually appealing web pages while learning modern web development concepts.
+ 
+My goal is to become a skilled web developer, gain practical experience, and build innovative projects that solve real-world problems.
+ 
+I am always eager to learn new things, take on challenges, and grow as a developer.</p>
+ </section>
+        </p>
+
+    </div>
+
+</section>
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Learning web page structure and development.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Learning website styling and creative layouts.</p>
+        </div>
+
+        <div class="card">
+            <h3>C Programming</h3>
+            <p>Learning programming fundamentals and logic.</p>
+        </div>
+
+        <div class="card">
+            <h3>C++</h3>
+            <p>Learning object-oriented programming.</p>
+        </div>
+
+        <div class="card">
+            <h3>DBMS</h3>
+            <p>Learning database management, SQL and database concepts.</p>
+        </div>
+
+        <div class="card">
+            <h3>Basic Computer Skills</h3>
+            <p>Knowledge of computer fundamentals, MS Office and basic computer operations.</p>
+        </div>
+
+    </div>
+
+</section><!-- EDUCATION -->
+
+<section id="education">
+
+    <h2 class="section-title">My Education</h2>
+
+    <div class="cards">
+
+        <div class="card education">
+            <h3>10th Standard</h3>
+            <h2>89.20%</h2>
+        </div>
+
+        <div class="card education">
+            <h3>Diploma - Semester 1</h3>
+            <h2>84.00%</h2>
+        </div>
+
+        <div class="card education">
+            <h3>Diploma - Semester 2</h3>
+            <h2>88.20%</h2>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CERTIFICATES -->
+
+<section id="certificates">
+
+    <h2 class="section-title">My Certificates</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>DSU Certificate</h3>
+
+            <p>DSU Course Certificate</p>
+
+            <a href="C:\Users\Admin\Downloads\dsu certificate.pdf"
+               target="_blank"
+               class="certificate-link">
+                View Certificate
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h3>DMS Certificate</h3>
+
+            <p>DMS Course Certificate</p>
+
+            <a href="C:\Users\Admin\Downloads\DBMS Certificate.pdf"
+               target="_blank"
+               class="certificate-link">
+                View Certificate
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <h3>OOP Certificate</h3>
+
+            <p>OOP Course Certificate</p>
+
+            <a href="C:\Users\Admin\Downloads\oop certificate.pdf"
+               target="_blank"
+               class="certificate-link">
+                View Certificate
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact">
+
+        <p>
+            Phone:
+            <a href="tel:7021034979">7021034979</a>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:samruddhinikam78@gmail.com">
+                samruddhinikam78@gmail.com
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Samruddhi Nikam | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>
